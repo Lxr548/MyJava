@@ -11,9 +11,9 @@ public class Demo4 {
         		sum=sum+i;
         		if(sum>=25000) {
         			break;
-        			}
         		}
-        	} 
-    		System.out.print("0到1000之间(40,48跳过，大于等于25000跳出)偶数的和为："+sum);
-        }
-	}
+        	}
+        } 
+    	System.out.print("0到1000之间(40,48跳过，大于等于25000跳出)偶数的和为："+sum);
+    }
+}
