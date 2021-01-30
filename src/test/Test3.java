@@ -23,15 +23,15 @@ public class Test3 {
 		pw.close();
 		Iterator<String> keys = map.keySet().iterator();
 		int i = 0;
-        while (keys.hasNext()) {
-        	String key = keys.next();
-        	i++;
-        	if(admins.equals(key)&&pws.equals(map.get(key))){
-        		System.out.println("登陆成功！");
-        		i--;
-        		break;
-        	}
-        }
+		while (keys.hasNext()) {
+			String key = keys.next();
+			i++;
+			if(admins.equals(key)&&pws.equals(map.get(key))){
+				System.out.println("登陆成功！");
+				i--;
+				break;
+			}
+		}
 		if(i == map.size()){
 			System.out.println("您输入的账号或密码不正确");
 		}

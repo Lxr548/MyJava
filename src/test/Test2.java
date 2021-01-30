@@ -16,12 +16,13 @@ public class Test2 {
 			System.out.print("Ö¸Áî´íÎó£¡");
 		}
 	}
+	
 	public static String randomCode() {
-        StringBuilder str = new StringBuilder();
-        Random random = new Random();
-        for (int i = 0; i < 6; i++) {
-            str.append(random.nextInt(10));
-        }
-        return str.toString();
-    }
+		StringBuilder str = new StringBuilder();
+		Random random = new Random();
+		for (int i = 0; i < 6; i++) {
+			str.append(random.nextInt(10));
+		}
+		return str.toString();
+	}
 }
