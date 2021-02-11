@@ -7,18 +7,21 @@ import java.util.Scanner;
 public class Test4 {
 	public static void main(String[] args) {
     	Scanner in = new Scanner(System.in);
-    	System.out.print("ÇëÊäÈëÒ»¸öÄ¿Â¼µÄµØÖ·:");
+    	System.out.print("è¯·è¾“å…¥ä¸€ä¸ªç›®å½•çš„åœ°å€:");
     	String filePath = in.nextLine();
     	in.close();
     	File file = new File(filePath);
+    	File[] files = file.listFiles();
     	if (file.exists()) {
-    		File[] files = file.listFiles();
     		for (int i=0; i< files.length; i++) {
+    			if(files[i].isDirectory()) {
+    				continue;
+    			}
     			System.out.println(files[i].getName());
     		}
     	}
     	else {
-    		System.out.println( "Ä¿Â¼²»´æÔÚ»òËü²»ÊÇÒ»¸öÄ¿Â¼");            
+    		System.out.println( "ç›®å½•ä¸å­˜åœ¨æˆ–å®ƒä¸æ˜¯ä¸€ä¸ªç›®å½•");            
     	}
 	}
 }
