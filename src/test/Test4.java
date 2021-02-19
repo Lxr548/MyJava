@@ -11,17 +11,21 @@ public class Test4 {
     	String filePath = in.nextLine();
     	in.close();
     	File file = new File(filePath);
-    	File[] files = file.listFiles();
+    	func(file);
+	}
+	public static void func(File file) {
     	if (file.exists()) {
+    		File[] files = file.listFiles();
     		for (int i=0; i< files.length; i++) {
     			if(files[i].isDirectory()) {
+    				func(files[i]);
     				continue;
     			}
     			System.out.println(files[i].getName());
     		}
     	}
     	else {
-    		System.out.println( "目录不存在或它不是一个目录");            
+    		System.out.println( "目录不存在或它不是一个目录");          
     	}
 	}
 }

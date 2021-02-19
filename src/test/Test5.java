@@ -17,10 +17,11 @@ public class Test5 {
 			BufferedReader reader = new BufferedReader(new FileReader(file));
 			StringBuffer sb = new StringBuffer();  
 			while((line = reader.readLine()) != null) {  
-				sb.append(line);  
-			}  
+				sb.append(line);
+				sb.append("\n");
+			}
 			String str = sb.toString().toLowerCase();
-			String[] elements = str.split("[,.\\s]");
+			String[] elements = str.split("\\W+");
 			reader.close();
 			Scanner in=new Scanner(System.in);
 			System.out.print("请输入一个想要查找的单词:");
